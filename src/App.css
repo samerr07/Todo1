@@ -1,38 +1,147 @@
-.App {
+*{
+  font-family: cursive;
+}
+.container{
+  background: linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
+  min-height: 100vh;
+  padding-top: 115px;
+  box-sizing:border-box
+}
+.todo-app {
+  max-width: 400px;
+  margin: 0 auto;
+  /* margin-top: 20px; */
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  /* background-color: rgb(250, 241, 241); */
+  background-color: white;
+}
+
+.todo-app h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-todo {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.add-todo input {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.add-todo button {
+  margin-left: 10px;
+}
+
+.todo-list {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  color:orangered;
+  font-weight: bold;
+}
+
+.todo-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.todo-item:hover {
+  /* background-color: #f0f0f0; */
+  background-color: #ccc;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+}
+
+.todo-item .todo-text {
+  flex-grow: 1;
+}
+
+.todo-item .todo-actions button {
+  margin-left: 5px;
+}
+
+.todo-stats {
+  text-align: center;
+  margin-top: 10px;
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.add{
+  border: none;
+  outline: none;
+  height: 2.3em;
+  border-radius: 12px;
   color: white;
+  background-color: rgb(212, 201, 201);
 }
 
-.App-link {
-  color: #61dafb;
+.addBtn {
+  background-color: #3c87ff;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  width: 4em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.serch {
+  width: 75%;
+  border: none;
+  outline: none;
+  height: 1em;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  background-color: rgb(212, 201, 201);
+}
+
+.serBtn{
+  background-color: yellow;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  width: 4em;
+  color: #3c87ff;
+  
+  height: 2.5em;
+  margin-left: 1em;
+}
+
+.delete{
+  color: red;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+} 
+
+.toggle{
+  color: green;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+.up{
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+svg:hover{
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.38);
 }
